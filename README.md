@@ -1,10 +1,11 @@
-📄 Project Overview
+## 📄 Project Overview
+
 This project was created as part of an assignment to replicate a given design and improve its functionality.
 The goal was to reproduce the provided visual layout as accurately as possible while enhancing responsiveness and interactivity.
 
 ---
 
-🛠 Features
+## 🛠 Features
 Pixel-perfect replication of the given design.
 
 Responsive layout for desktop, tablet, and mobile screens.
@@ -22,7 +23,7 @@ HomePage styles
 Shared global styles
 
 ---
-
+## Folder Structure
 ```
 DoMedia_Homepage
 ├─ public
@@ -48,7 +49,7 @@ DoMedia_Homepage
 
 ---
 
-How to Run
+## How to Run
 Clone or download the repository.
 
 Open src/HomePage/index.html or src/AboutUs/index.html in your web browser.
@@ -57,7 +58,7 @@ No build steps required, this is a plain HTML/CSS/JS project.
 
 ---
 
-📌 Notes
+## 📌 Notes
 This is not a production project, it’s purely for learning and fulfilling the assignment requirements.
 
 The layout and style were guided by the provided design reference, with some improvements for responsiveness and accessibility.
