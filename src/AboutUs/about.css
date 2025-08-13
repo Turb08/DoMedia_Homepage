@@ -1,0 +1,112 @@
+:root {
+  --max: 1120px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  --font-color-1: #fff;
+  --font-color-2: #000;
+
+  --fs-base: clamp(0.98rem, 0.35vw + 0.9rem, 1.12rem);
+  --fs-h1: clamp(2rem, 3.3vw + 1rem, 2.9rem);
+}
+
+@font-face {
+  font-family: "Helvetica Neue Thin";
+  src: url("/public/fonts/HelveticaNeue-Thin.woff2") format("woff2"),
+    url("/public/fonts/HelveticaNeue-Thin.woff") format("woff");
+}
+
+body {
+  background: linear-gradient(to right, #4457fd, #63d3e3);
+  font-family: "Helvetica Neue Thin", sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  color: var(--font-color-1);
+  background-image: url("/public/ModernOffice.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sec1 {
+  width: min(100% - 2rem, var(--max));
+  margin: auto;
+  align-items: center;
+  padding-block: clamp(0.5rem, 100%, 5rem);
+  color: var(--font-color-2);
+}
+
+#hero-text {
+  font-size: var(--fs-h1);
+  line-height: 1.15;
+  margin: 0 0 var(--space-1) 0;
+  font-weight: bolder;
+  padding-top: var(--space-2);
+}
+
+#text-content {
+  max-width: none;
+  margin: 20px 0 30px;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+
+.sec2 {
+  color: var(--font-color-1);
+  width: min(100% - 2rem, var(--max));
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-block: clamp(0.5rem, 100%, 5rem);
+  gap: var(--space-3);
+  flex-direction: row-reverse;
+}
+
+#hero-text-1 {
+  text-align: right;
+  font-size: var(--fs-h1);
+  line-height: 1.15;
+  margin: 0 0 var(--space-1) 0;
+  font-weight: bolder;
+  padding-top: var(--space-2);
+}
+
+#text-content-1 {
+  text-align: right;
+  max-width: none;
+  margin: 20px 0 30px;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+}
+
+.sec2 > div:first-child {
+  flex: 1;
+}
+
+#image-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#image-content img {
+  width: 100%;
+  max-width: min(100%, 599px);
+  height: auto;
+  object-fit: cover;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+  border-radius: 10px 30px 10px 30px;
+}
+
+@media (max-width: 768px) {
+  .sec2 {
+    flex-direction: column;
+    text-align: center;
+  }
+  #hero-text-1,
+  #text-content-1 {
+    text-align: center;
+  }
+}
