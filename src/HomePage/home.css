@@ -1,0 +1,75 @@
+:root {
+  --max: 1120px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  --font-color: #fff;
+
+  --fs-base: clamp(0.98rem, 0.35vw + 0.9rem, 1.12rem);
+  --fs-h1: clamp(2rem, 3.3vw + 1rem, 2.9rem);
+}
+
+@font-face {
+  font-family: "Helvetica Neue Thin";
+  src: url("/public/fonts/HelveticaNeue-Thin.woff2") format("woff2"),
+    url("/public/fonts/HelveticaNeue-Thin.woff") format("woff");
+}
+
+body {
+  background: linear-gradient(to right, #4457fd, #63d3e3);
+  font-family: "Helvetica Neue Thin", sans-serif;
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  color: var(--font-color);
+}
+
+.textcontainer {
+  width: min(100% - 2rem, var(--max));
+  margin: auto;
+  display: grid;
+  align-items: center;
+  padding-block: clamp(0.5rem, 100%, 5rem);
+}
+
+#hero-text {
+  font-size: var(--fs-h1);
+  line-height: 1.15;
+  margin: 0 0 var(--space-1) 0;
+  font-weight: 500;
+  padding-top: var(--space-2);
+}
+
+#text-content {
+  max-width: none;
+  margin: 20px 0 30px;
+  letter-spacing: 0.7px;
+}
+
+#get-started {
+  padding: 0.85rem 2rem;
+  border-color: #ffffff;
+  border-radius: var(--max);
+  background: none;
+  color: var(--font-color);
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1.4px;
+  font-family: "Helvetica Neue Thin", sans-serif;
+  font-size: var(--fs-base);
+}
+
+#get-started img {
+  width: 20px;
+  height: 12px;
+  position: relative;
+  top: 1px;
+  left: 7px;
+}
+
+#image-content img {
+  max-width: min(100%, 599px);
+  height: auto;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
